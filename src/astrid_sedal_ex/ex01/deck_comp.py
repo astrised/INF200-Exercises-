@@ -1,6 +1,7 @@
 SUITS = ('C', 'S', 'H', 'D')
 VALUES = range(1, 14)
 
+
 def deck_loop():
     deck = []
     for suit in SUITS:
