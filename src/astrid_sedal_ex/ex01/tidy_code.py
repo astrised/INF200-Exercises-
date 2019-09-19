@@ -1,7 +1,7 @@
-from random import randint as a
+from random import randint
 
-__author__ = ''
-__email__ = '@nmbu.no'
+__author__ = 'Astrid Sedal'
+__email__ = 'astrised@nmbu.no'
 
 
 def guess_number():
@@ -12,7 +12,7 @@ def guess_number():
 
 
 def draw_sum():
-    return a(1, 6) + a(1, 6)
+    return randint(1, 6) + randint(1, 6)
 
 
 def check(answer, guess):
