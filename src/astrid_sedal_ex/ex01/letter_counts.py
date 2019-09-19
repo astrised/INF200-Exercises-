@@ -1,14 +1,14 @@
 
 def letter_freq(txt):
-    dict = {}
+    freq = {}
     txt = txt.lower()
-    for letter in txt:
-        keys = dict.keys()
-        if letter in keys:
-            dict[letter] += 1
+    for character in txt:
+        keys = freq.keys()
+        if character in keys:
+            freq[character] += 1
         else:
-            dict[letter] = 1
-    return dict
+            freq[character] = 1
+    return freq
 
 
 if __name__ == '__main__':
