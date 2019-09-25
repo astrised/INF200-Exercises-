@@ -1,6 +1,13 @@
 def char_counts(textfilename):
-    file = open(textfilename, 'r')
-    pass
+    with open(textfilename, 'r', encoding='utf-8') as f:
+        textfile_string = f.read()
+        f.close()
+
+    frequencies_char = [0] * 256
+    for char in textfile_string:
+        frequencies_char[ord(char)] += 1
+
+    return frequencies_char
 
 
 if __name__ == '__main__':
