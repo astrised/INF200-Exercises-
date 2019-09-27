@@ -5,8 +5,8 @@ __author__ = "Astrid Hæve Sedal"
 __email__ = "astrised@nmbu.no"
 
 
-def bubble_sort(data):
-    list_data = list(data)
+def bubble_sort(data_to_be_sorted):
+    list_data = list(data_to_be_sorted)
     length_data = len(list_data)
 
     for i in range(length_data):
