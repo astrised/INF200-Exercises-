@@ -2,6 +2,7 @@ Exersice 1
 ----------
 
 
+<<<<<<< HEAD
 -  For details, see `task description in the exersices
    repo <https://github.com/yngvem/INF200-2019-Exersices/blob/master/exersices/ex01.rst>`__
 -  Deadline: **Friday 20th September, 14.00**
@@ -141,3 +142,22 @@ variable and function names, and maybe also reorganise code.
            print('You won {} points.'.format(i))
        else:
            print('You lost. Correct answer: {}.'.format(j))
+=======
+SUITS = ('C', 'S', 'H', 'D')
+VALUES = range(1, 14)
+
+def deck_loop():
+    deck = []
+    for suit in SUITS:
+        for val in VALUES:
+            deck.append((suit, val))
+    return deck
+
+def deck_comp():
+    return deck = [(suit, val) for suit in SUITS for val in VALUES]
+
+
+if __name__ == '__main__':
+    if deck_loop() != deck_comp():
+        print('ERROR!')
+>>>>>>> master

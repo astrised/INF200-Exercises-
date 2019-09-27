@@ -1,4 +1,21 @@
+# -*- coding: utf-8 -*-
+
+
+__author__ = "Astrid Hæve Sedal"
+__email__ = "astrised@nmbu.no"
+
+
 def char_counts(textfilename):
+    """
+    The function counts how often each character code occurs in a text file.
+    The text file is converted into a
+    single string and encoded using utf-8.
+
+    Returns
+    -------
+    frequnecies_char: list
+    """
+
     with open(textfilename, 'r', encoding='utf-8') as f:
         textfile_string = f.read()
         f.close()
