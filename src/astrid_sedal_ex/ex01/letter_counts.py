@@ -1,4 +1,3 @@
-
 def letter_freq(txt):
     freq = {}
     txt = txt.lower()
