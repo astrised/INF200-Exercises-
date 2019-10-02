@@ -70,3 +70,13 @@ def test_median_rasis_value_error_on_empty_list():
 
     with pytest.raises(ValueError):  # context manager
         median([])
+
+
+def test_original_data_unchanged():
+    """Tests if the the median function leaves the original data unchanged"""
+
+    data = [1, 2, 3]
+
+    _ = median(data)
+
+    assert data == [1, 2, 3]
