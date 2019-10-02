@@ -33,4 +33,11 @@ def test_odd_numbers_of_elements():
     list_1 = [1, 4, 7]
 
     assert median(list_1) == 4
-    
+
+
+def even_numbers_of_elements():
+    """ Tests lists for even numbers of elements."""
+
+    list_1 = [2, 4, 6, 8]
+
+    assert median(list_1) == 5
