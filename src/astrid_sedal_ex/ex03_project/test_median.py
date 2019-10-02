@@ -3,6 +3,8 @@
 __author__ = 'Astrid Hæve Sedal'
 __email__ = 'astrised@nmbu.no'
 
+import pytest
+
 
 def median(data):
     """
@@ -14,6 +16,9 @@ def median(data):
 
     sorted_data = sorted(data)
     num_elements = len(sorted_data)
+
+    if num_elements < 1:
+        raise ValueError
 
     if num_elements % 2 == 1:
         return sorted_data[num_elements // 2]
@@ -55,3 +60,13 @@ def test_ordered_reverse_ordered_unordered_elements():
     assert median(list_ordered) == 2
     assert median(list_reverse_ordered) == 2
     assert median(list_unordered) == 2
+
+
+def test_median_rasis_value_error_on_empty_list():
+    """
+    Test checking that requesting the median of an empty list
+    raises a ValueError exception.
+    """
+
+    with pytest.raises(ValueError):  # context manager
+        median([])
