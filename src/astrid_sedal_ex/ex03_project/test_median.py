@@ -23,7 +23,14 @@ def median(data):
 
 
 def test_one_element_list():
+    """Tests if it returns the correct value for a one-element list."""
+
     assert median([4]) == 4
 
+def test_odd_numbers_of_elements():
+    """Tests lists with odd numbers of elements"""
 
+    list_1 = [1, 4, 7]
 
+    assert median(list_1) == 4
+    
