@@ -28,13 +28,17 @@ def median(data):
 
 
 def test_one_element_list():
-    """Tests if it returns the correct value for a one-element list."""
+    """
+    Tests if it returns the correct value for a one-element list.
+    """
 
     assert median([4]) == 4
 
 
 def test_odd_numbers_of_elements():
-    """Tests lists with odd numbers of elements"""
+    """
+    Tests lists with odd numbers of elements.
+    """
 
     list_1 = [1, 4, 7]
 
@@ -42,7 +46,9 @@ def test_odd_numbers_of_elements():
 
 
 def even_numbers_of_elements():
-    """ Tests lists for even numbers of elements."""
+    """
+    Tests lists for even numbers of elements.
+    """
 
     list_1 = [2, 4, 6, 8]
 
@@ -50,8 +56,10 @@ def even_numbers_of_elements():
 
 
 def test_ordered_reverse_ordered_unordered_elements():
-    """Tests median of lists with ordered, reverse-ordered and unordered
-    elements."""
+    """
+    Tests median of lists with ordered, reverse-ordered and unordered
+    elements.
+    """
 
     list_ordered = [1, 2, 3]
     list_reverse_ordered = [3, 2, 1]
@@ -73,10 +81,24 @@ def test_median_rasis_value_error_on_empty_list():
 
 
 def test_original_data_unchanged():
-    """Tests if the the median function leaves the original data unchanged"""
+    """
+    Tests that the the median function leaves the original data unchanged.
+    """
 
     data = [1, 2, 3]
 
     _ = median(data)
 
     assert data == [1, 2, 3]
+
+
+def test_tuples_and_lists():
+    """
+    Test that the median function works for tuples as well as lists.
+    """
+
+    tuples = (1, 2, 3)
+    lists = [4, 5, 6]
+
+    assert median(tuples) == 2
+    assert median(lists) == 5
