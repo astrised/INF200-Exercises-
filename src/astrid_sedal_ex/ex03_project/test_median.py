@@ -27,6 +27,7 @@ def test_one_element_list():
 
     assert median([4]) == 4
 
+
 def test_odd_numbers_of_elements():
     """Tests lists with odd numbers of elements"""
 
@@ -41,3 +42,16 @@ def even_numbers_of_elements():
     list_1 = [2, 4, 6, 8]
 
     assert median(list_1) == 5
+
+
+def test_ordered_reverse_ordered_unordered_elements():
+    """Tests median of lists with ordered, reverse-ordered and unordered
+    elements."""
+
+    list_ordered = [1, 2, 3]
+    list_reverse_ordered = [3, 2, 1]
+    list_unordered = [2, 3, 1]
+
+    assert median(list_ordered) == 2
+    assert median(list_reverse_ordered) == 2
+    assert median(list_unordered) == 2
