@@ -87,7 +87,7 @@ def test_original_data_unchanged():
 
     data = [1, 2, 3]
 
-    _ = median(data)
+    median(data)
 
     assert data == [1, 2, 3]
 
