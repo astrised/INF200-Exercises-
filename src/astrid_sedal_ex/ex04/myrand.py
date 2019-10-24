@@ -3,8 +3,6 @@
 __author__ = 'Astrid Hæve Sedal'
 __email__ = 'astrised@nmbu.no'
 
-import random
-
 
 class LCGRand:
     def __init__(self, seed):
@@ -36,8 +34,8 @@ if __name__ == "__main__":
     print(lcg.rand())
     print(lcg.rand())
 
-    numbers = [1, 7]
-    lr = ListRand(numbers)
+    test_num = [1, 7]
+    lr = ListRand(test_num)
     print(lr.rand())
     print(lr.rand())
     print(lr.rand())

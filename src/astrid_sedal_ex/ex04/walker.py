@@ -2,9 +2,10 @@
 
 __author__ = 'Astrid Hæve Sedal'
 __email__ = 'astrised@nmbu.no'
-__email__ = 'astrised@nmbu.no'
+
 
 import random
+
 
 class Walker:
     def __init__(self, start_position, home):
@@ -45,12 +46,10 @@ def multi_simulations(sim_n, distance):
 
 
 if __name__ == "__main__":
-    print(f'Distance:   1 -> Path lengths: {multi_simulations(5, 1)}')
-    print(f'Distance:   2 -> Path lengths: {multi_simulations(5, 2)}')
-    print(f'Distance:   5 -> Path lengths: {multi_simulations(5, 5)}')
+    print(f'Distance:    1 -> Path lengths: {multi_simulations(5, 1)}')
+    print(f'Distance:    2 -> Path lengths: {multi_simulations(5, 2)}')
+    print(f'Distance:    5 -> Path lengths: {multi_simulations(5, 5)}')
     print(f'Distance:   10 -> Path lengths: {multi_simulations(5, 10)}')
     print(f'Distance:   20 -> Path lengths: {multi_simulations(5, 20)}')
     print(f'Distance:   50 -> Path lengths: {multi_simulations(5, 50)}')
-    print(f'Distance:   100 -> Path lengths: {multi_simulations(5, 100)}')
-
-
+    print(f'Distance:  100 -> Path lengths: {multi_simulations(5, 100)}')
