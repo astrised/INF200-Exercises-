@@ -11,7 +11,6 @@ class Walker:
     def __init__(self, start_position, home):
         self.x = start_position
         self.h = home
-        #self.moves = [-1, 1]
         self.step = 0
 
     def move(self):

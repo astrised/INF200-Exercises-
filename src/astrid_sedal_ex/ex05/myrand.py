@@ -96,27 +96,14 @@ class RandIter:
         return next_num_generated
 
 
-
-
-
-
 if __name__ == "__main__":
-#lcg = LCGRand(346)
-#print(lcg.rand())
-#print(lcg.rand())
 
-#test_num = [1, 7]
-#lr = ListRand(test_num)
-#print(lr.rand())
-#print(lr.rand())
-#print(lr.rand())
-
-    random_number_generator = LCGRand(1)
-    for rand in random_number_generator.random_sequence(10):
+    generator = LCGRand(1)
+    for rand in generator.random_sequence(10):
         print(rand)
 
     i = 1
-    for rand in random_number_generator.infinite_random_sequence():
+    for rand in generator.infinite_random_sequence():
         print(f'The {i}-th random number is {rand}')
         if i > 100:
             break
