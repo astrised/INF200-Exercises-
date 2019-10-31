@@ -3,7 +3,7 @@
 __author__ = 'Astrid Hæve Sedal'
 __email__ = 'astrised@nmbu.no'
 
-from walker_sim import Walker, Simulation
+from src.astrid_sedal_ex.ex05.walker_sim import Walker, Simulation
 
 
 class BoundedWalker(Walker):
@@ -23,18 +23,20 @@ class BoundedWalker(Walker):
         right_limit : int
             The right boundary  of walker movement
         """
+        super().__init__(start, home)
         self.left_limit = left_limit
         self.right_limit = right_limit
 
-        super().__init__(start, home)
-
     def move(self):
         super().move()
-        if super().get_position() > self.right_limit:
-            self.position = self.right_limit
 
-        if super().get_position() > self.left_limit:
-            self.position = self.left_limit
+        if super().get_position() > self.right_limit:
+            self.x = self.right_limit
+            self.step -= 1
+
+        if super().get_position() < self.left_limit:
+            self.x = self.left_limit
+            self.step -= 1
 
 
 class BoundedSimulation(Simulation):
@@ -55,10 +57,17 @@ class BoundedSimulation(Simulation):
         right_limit : int
             The right boundary  of walker movement
         """
+        super().__init__(start, home, seed)
         self.left_limit = left_limit
         self.right_limit = right_limit
 
-        super().__init__(start, home, seed)
+    def single_walk(self):
+
+        walk = BoundedWalker(self.start, self.home, self.left_limit, self.right_limit)
+
+        while not walk.is_at_home():
+            walk.move()
+        return walk.get_steps()
 
 
 if __name__ == "__main__":

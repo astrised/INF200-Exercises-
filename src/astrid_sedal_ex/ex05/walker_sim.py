@@ -11,12 +11,12 @@ class Walker:
     def __init__(self, start_position, home):
         self.x = start_position
         self.h = home
-        self.moves = [-1, 1]
+        #self.moves = [-1, 1]
         self.step = 0
 
     def move(self):
-        move = random.choice(self.moves)
-        self.x += move
+        step = (-1) ** random.randint(0, 1)
+        self.x += step
         self.step += 1
 
     def is_at_home(self):
@@ -27,22 +27,6 @@ class Walker:
 
     def get_steps(self):
         return self.step
-
-
-def simulation(distance):
-    walk = Walker(0, distance)
-
-    while not walk.is_at_home():
-        walk.move()
-    return walk.get_steps()
-
-
-def multi_simulations(sim_n, distance):
-    res = []
-
-    for i in range(sim_n):
-        res.append(simulation(distance))
-    return res
 
 
 class Simulation:
@@ -97,7 +81,7 @@ class Simulation:
         random.seed(self.seed)
 
         for i in range(num_walks):
-            num_list.append(Simulation.single_walk(self))
+            num_list.append(self.single_walk())
         return num_list
 
 
